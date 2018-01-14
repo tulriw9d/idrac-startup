@@ -13,9 +13,9 @@ else: #if host can't be pinged
   if response == 0: #idrac is up
     ssh = paramiko.SSHClient() #ssh into idrac
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    ssh.connect("192.168.1.219", port=22, username="root", password="calvin", look_for_keys=False)
+    ssh.connect("idracipaddr", port=22, username="youridracUN", password="youridracPW", look_for_keys=False)
     ssh_stdin, ssh_stdout, ssh_stderr = ssh.exec_command('racadm serveraction powerup')
-    print('Starting SuperPi') 
+    print('Starting host') 
   else: #if idrac is down
      sys.exit() 
      print('iDrac down!')
