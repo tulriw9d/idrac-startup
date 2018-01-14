@@ -19,3 +19,7 @@ Hardware config:
 Make sure the pi is not attached to the UPS, that way it will power on and off with power outages which is vital.
 Use ethernet connections where possible.
 
+
+Dependencies:
+
+You need to install paramiko for this to work http://www.paramiko.org/installing.html 
