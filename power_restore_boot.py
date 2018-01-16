@@ -3,13 +3,15 @@
 import os
 import paramiko
 import sys
+import time
 
 hostname = "host-ip" #hostip
 idrac = "idrac-ip" #idracip
 idracUN = "youridracUN"
 idracPW = "youridracPW"
+waittime = "WaitTimeInSeconds"
 
-
+#time.sleep(waittime) #Uncomment if you'd like a dealy to ensure power is stable
 response = os.system("ping -c 1 -w2 " + hostname + " > /dev/null 2>&1") #ping host
 #check response
 if response == 0: #host is up
